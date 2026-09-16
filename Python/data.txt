@@ -1,4 +1,0 @@
-Ducat,
-sector-16
-NoidaHello
-Hello
