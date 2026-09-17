@@ -156,6 +156,90 @@ A structured course guide for learning Python from the first program through obj
 - Thread-related functions and methods
 - Thread synchronization and locking
 
+## Topic Examples
+
+### Variables, Input, and Conditions
+
+```python
+name = input("Enter your name: ")
+score = float(input("Enter your score: "))
+
+if score >= 60:
+  result = "Pass"
+else:
+  result = "Try again"
+
+print(f"{name}: {result}")
+```
+
+### Loops and List Comprehension
+
+```python
+numbers = range(1, 11)
+squares = [number ** 2 for number in numbers if number % 2 == 0]
+
+for square in squares:
+  print(square)
+```
+
+### Dictionaries and Functions
+
+```python
+def average_marks(marks: dict[str, int]) -> float:
+  return sum(marks.values()) / len(marks)
+
+
+student = {"name": "Aman", "Python": 88, "SQL": 82}
+marks = {subject: score for subject, score in student.items()
+     if subject != "name"}
+
+print(student["name"])
+print(f"Average: {average_marks(marks):.1f}")
+```
+
+### File I/O and Exception Handling
+
+```python
+try:
+  with open("notes.txt", "r", encoding="utf-8") as file:
+    content = file.read()
+except FileNotFoundError:
+  content = "No notes file found."
+
+print(content)
+```
+
+### Object-Oriented Programming
+
+```python
+class Student:
+  def __init__(self, name: str, score: int):
+    self.name = name
+    self.score = score
+
+  def summary(self) -> str:
+    return f"{self.name}: {self.score}%"
+
+
+student = Student("Aman", 88)
+print(student.summary())
+```
+
+### Threading
+
+```python
+from threading import Thread
+
+
+def print_status(task: str) -> None:
+  print(f"Finished: {task}")
+
+
+worker = Thread(target=print_status, args=("Python practice",))
+worker.start()
+worker.join()
+```
+
 ## Learning Outcomes
 
 By the end of this course, you should be able to:
