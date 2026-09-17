@@ -1,0 +1,113 @@
+Deep Learning & Neural Networks
+Introduction To Artificial Neural Network
+    What is artificial neural network (ANN)?
+    How neural network works?
+    Perceptron
+    Multilayer perceptron
+    Feedforward
+    Back propagation
+Introduction To Deep Learning
+    What is deep learning?
+    Deep learning packages
+    Deep learning applications
+    Building deep learning environment
+        Installing tensor flow locally
+        Understanding google colab
+Tensor Flow Basics
+    What is tensorflow?
+    Tensorflow 1.x v/s tensorflow 2.x
+    Variables, constants
+    Scalar, vector, matrix 
+    Operations using tensorflow
+    Difference between tensorflow and numpy operations
+    Computational graph
+Optimizers
+    What does optimizers do?
+    Gradient descent (full batch and min batch)
+    Stochastic gradient descent
+    Learning rate , epoch
+Activation Functions
+    What does activation functions do?
+    Sigmoid function,
+    Hyperbolic tangent function (tanh)
+    ReLU –rectified linear unit
+    Softmax function
+    Vanishing gradient problem
+Building Artificial Neural Network
+    Using scikit implementation 
+    Using tensorflow 
+    Understanding mnist dataset
+    Initializing weights and biases
+    Gradient tape
+    Defining loss/cost function
+    Train the neural network
+    Minimizing the loss by adjusting weights and biasesl
+Modern Deep Learning Optimizers and Regularization
+    SGD with momentum
+    RMSprop
+    AdaGrad
+    Adam
+    Dropout layers and regularization
+    Batch normalization
+Building Deep Neural Network Using Keras
+    What is keras?
+    Keras fundamental for deep learning
+    Keras sequential model and functional api
+    Solve a linear regression and classification problem with example
+    Saving and loading a keras model
+Convolutional Neural Networks (CNNs)
+    Introduction to CNN
+    CNN architecture
+    Convolutional operations
+    Pooling, stride and padding operations
+    Data augmentation
+    Building,training and evaluating first CNN model
+    Model performance optimization
+    Auto encoders for CNN
+    Transfer learning and object detection using pre-trained CNN models
+        LeNet
+        AlexNet
+        VGG16
+        ResNet50
+        Yolo algorithm
+Word Embedding
+    What is word embedding?
+    Word2vec embedding
+        CBOW
+        Skipgram
+    Keras embedding layers
+    Visualize word embedding
+    Google word2vec embedding
+    Glove embedding
+Recurrent Neural Networks (RNNs)
+    Introduction to RNN
+    RNN architecture
+    Implementing basic RNN in tensorflow
+    Need for LSTM and GRU
+    Deep RNN/LSTM/GRU
+    Text classification using LSTM
+    Prediction for time series problem
+    Seq-2-seq modeling
+    Encoder-decoder 
+Generative Adversarial Networks (GANs)
+    Introduction to GAN
+    Generator
+    Discriminator
+    Types of GAN
+    Implementing GAN using neural network
+Speech Recognition APIs
+    Text to speech
+    Speech to text
+    Automate task using voice
+    Voice search on web
+Projects(Any Four)
+    Stock Price Prediction Using LSTM 
+    Object Detection
+    Attendance System Using Face Recognition
+    Facial Expression and Age Prediction
+    Neural Machine Translation
+    Hand Written Digits& Letters Prediction
+    Number Plate Recognition
+    Gender Classification
+    My Assistant for Desktop
+    Cat v/s Dog Image Classification

@@ -1,0 +1,94 @@
+Machine Learning
+Introduction To Machine Learning
+    Traditional v/s Machine Learning Programming
+    Real life examples based on ML
+    Steps of ML Programming
+    Data Preprocessing revised
+    Terminology related to ML
+Supervised Learning
+         Classification 
+         Regression
+Unsupervised Learning
+          clustering
+KNN Classification 
+    Math behind KNN
+    KNN implementation
+    Understanding hyper parameters
+Performance metrics 
+    Confusion Matrix 
+    Accuracy Score
+    Recall & Precision
+    F-1 Score
+    R2 Score
+Regression
+    Math behind Regression
+    Simple Linear Regression
+    Multiple Linear Regression
+    Polynomial Regression
+    Boston Price Prediction
+    Cost or Loss Functions
+          Mean absolute error
+          Mean squared error
+          Root mean squared error
+          Least Square Error
+    Regularization
+Logistic Regression for classification
+    Theory of Logistic Regression
+    Binary and Multiclass classification
+    Implementing titanic dataset
+    Implementing iris dataset
+    Sigmoid and softmax functions
+Support Vector Machines
+    Theory of SVM
+    SVM Implementation
+    kernel,gamma,alpha
+Decision Tree Classification
+    Theory of Decision Tree
+    Node Splitting
+    Implementation with iris dataset
+    Visualizing Tree
+Ensemble Learning
+    Random Forest
+    Bagging and Boosting
+    Voting Classifier
+Model Selection Techniques
+    Cross Validation
+    Grid and Random Search for hyper parameter tuning
+Recommendation System
+    Content based technique
+    Collaborative filtering technique
+    Evaluating similarity based on correlation
+    Classification-based recommendationsClustering
+Clustering
+    K-means Clustering
+    Hierarchical Clustering
+    Elbow technique
+    Silhouette coefficient
+    Dendogram
+Text Analysis
+    Install NLTK
+    Tokenize words
+    Tokenizing sentences
+    Stop words customization
+    Stemming and Lemmatization
+    Feature Extraction
+    Sentiment Analysis
+    Count Vectorizer
+    TfidfVectorizer
+    Naive Bayes Algorithms
+Dimensionality Reduction 
+    Principal Component Analysis(PCA)
+Open CV
+    Reading images
+    Understanding Gray Scale Image
+    Resizing image
+    Understanding Haar Classifiers
+    Face , eyes classification
+    How to use webcam in open cv
+    Building image data set
+    Capturing video
+    Face classification in video
+Projects
+    One project using Python & SQL
+    One project using Python & ML
+    One Dashboard using Power bi

@@ -1,0 +1,136 @@
+Introduction To Python
+Why Python
+Application areas of python
+Python implementations
+    Cpython
+    Jython
+    Ironpython
+    Pypy
+Python versions
+Installing python
+Python interpreter architecture
+    Python byte code compiler
+    Python virtual machine(pvm)
+
+Writing and Executing First Python Program
+    Using interactive mode
+    Using script mode 
+        General text editor and command window
+        Idle editor and idle shell 
+    Understanding print() function 
+    How to compile python program explicitly 
+
+Python Language Fundamentals
+    Character set
+    Keywords
+    Comments
+    Variables
+    Literals
+    Operators
+    Reading input from console
+    Parsing string to int, float
+
+Python Conditional Statements
+    If statement
+    If else statement
+    If elif statement
+    If elif else statement
+    Nested if statement
+Looping Statements
+    While loop
+    For loop
+    Nested loops
+    Pass, break and continue keywords
+Standard Data Types 
+    Int, float, complex, bool, nonetype
+    Str, list, tuple, range
+    Dict, set, frozenset
+
+String Handling
+    What is string
+    String representations
+    Unicode string
+    String functions, methods
+    String indexing and slicing
+    String formatting
+Python List
+    Creating and accessing lists
+    Indexing and slicing lists
+    List methods
+    Nested lists
+    List comprehension
+Python Tuple
+    Creating tuple
+    Accessing tuple
+    Immutability of tuple
+Python Set
+    How to create a set
+    Iteration over sets
+    Python set methods
+    Python frozenset
+Python Dictionary
+    Creating a dictionary
+    Dictionary methods
+    Accessing values from dictionary
+    Updating dictionary
+    Iterating dictionary
+    Dictionary comprehension
+Python Functions
+    Defining a function
+    Calling a function
+    Types of functions
+    Function arguments 
+        Positional arguments, keyword arguments
+        Default arguments, non-default arguments
+        Arbitrary arguments, keyword arbitrary arguments
+    Function return statement
+    Nested function
+    Function as argument
+    Function as return statement
+    Decorator function
+    Closure
+    Map(), filter(), reduce(), any() functions
+    Anonymous  or lambda function
+
+Modules & Packages
+    Why modules
+    Script v/s module
+    Importing module
+    Standard v/s third party modules
+    Why packages
+    Understanding pip utility
+
+File I/O
+    Introduction to file handling
+    File modes
+    Functions and methods related to file handling
+    Understanding with block
+
+Object Oriented Programming
+    Procedural v/s Object Oriented Programming
+    OOP Principles
+    Defining a Class & Object Creation
+    Inheritance
+    Encapsulation
+    Polymorphism
+    Abstraction
+    Garbage Collection
+    Iterator & Generator
+Exception Handling
+    Difference Between Syntax Errors and Exceptions
+    Keywords used in Exception Handling
+          try , except , finally , raise , assert
+    Types of Except Blocks
+    User-defined Exceptions
+GUI Programming
+     Introduction to Tkinter Programming
+     Tkinter Widgets
+     Layout Managers
+     Event handling
+     Displaying image
+Multi-Threading Programming
+    Multi-processing v/s Multi-threading
+    Need of threads
+    Creating child threads
+    Functions /methods related to threads
+    Thread synchronization and locking

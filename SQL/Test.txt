@@ -1,1 +1,92 @@
 SQL 
+SQL Using MySQLIntroduction to RDBMS
+    What is Relational Database Package
+    Difference between SQL & Database
+    Installing MySQL Server database
+SQL Basic
+    DDL: Create, Alter, Drop, etc.
+    DML: Insert, Update, Delete ,etc.
+    DQL : Select
+    Autoincrement field
+    SQL Comments
+    SQL Aliases
+    Savepoint & rollback
+SQL Constraints
+    Not NULL, Unique key
+    Primary key, Check
+    Default, Foreign key
+SQL Operators
+    Arithmetic operators
+    Logical operators
+    Conditional operators
+    Like, between, in operators
+SQL Clauses
+    Order by
+    Where
+    Limit/top
+    Group by
+    having
+Stored Procedures & Functions
+    Understanding stored procedures and their key benefits
+    Working with stored procedures
+    Studying user-defined functions
+SQL Functions
+    String functions
+    Aggregate functions
+    Date & time functions
+SQL Joins
+    Inner Join
+    Left Join
+    Right Join
+    Full Join
+SQL View
+    creating view
+    updating view
+    fetching data from view
+Working with CSV Files:
+    How to write result to csv file
+    How to read csv file
+Python Database Connectivity 
+    Database Drivers and connectors 
+    Creating connection object 
+    Understanding cursor  object   
+    Executing SQL statements using  cursor 
+    Fetching records from  cursor  
+    Storing and retrieving Date and Time  
+
+
+MONGODB
+
+
+Introduction To MongoDB    
+    Understanding NoSQL DB
+    NoSQL vs. SQL DB
+    Understanding Mongo DB
+    Downloading & Installation
+    Introduction of MongoDB shell and Compass
+    Understanding database, collection & document
+Crud Operations
+    Insert Document
+    Delete Document
+    Update Document
+    Query Document
+Operators In MongoDB
+    Query and Projection operators
+    Update operator
+    Aggregation Pipeline operators
+Methods In MongoDB
+    limit and sort 
+    bulk methods
+    other methods
+Indexing And Relationships
+    Types of Indexes
+    Creating an Indexes
+    Dropping an Indexes
+    Defining Relationships between Documents
+Python Connectivity With MongoDB
+    Introduction to pymongo
+    Installing pymongo module
+    MongoClient
+    Getting database and collection
+    CRUD operations
+    Range Queries

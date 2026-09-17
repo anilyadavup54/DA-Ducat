@@ -1,0 +1,60 @@
+Statistics & Analytics
+Introduction to Statistics 
+    Sample or Population
+    Measures of Central Tendency
+     Arithmetic Mean
+     Harmonic Mean
+     Geometric Mean
+     Mode
+    Quartiles
+    Variance & Standard Deviation
+    Outliers
+Data Distributions
+    Normal Distribution
+    Uniform Distribution
+    Exponential Distribution
+    Right & Left Skewed Distribution
+    Random Distribution
+    Central Limit Theoremndard Deviation
+Numpy Package
+    Difference between list and numpy array
+    Vector and Matrix operations
+    Array indexing and slicing
+
+Pandas Package
+Introduction To Pandas
+    Labeled and structured data
+    Series and DataFrame Objects
+How To Load Datasets
+    From excel
+    From csv
+    From html table
+    From database table
+Accessing Data From Data Frame
+    at & iat
+    loc & iloc
+    head() & tail()
+Exploratory Data Analysis (EDA)
+    Describe()
+    Groupby()
+    Crosstab()
+    boolean slicing / query()
+Data Manipulation & Cleaning 
+    Map(),apply()
+    Combining data frames
+    Adding/removing rows & columns
+    Sorting data
+    Handling missing values
+    Handling duplicacy
+    Handling Data Error
+Categorical Data Encoding
+    Label Encoding
+    One Hot Encoding 
+Categorical Data Encoding
+    Label Encoding
+    One Hot Encoding 
+Handling Date and Time
+    Data Visualization Using Matplotlib And Seaborn Packages    Scatter plot, lineplot, bar plot
+    Histogram, pie chart,
+    Jointplot, pairplot ,Heatmap
+    Outlier detection using boxplot

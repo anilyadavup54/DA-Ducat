@@ -1,1 +1,80 @@
 # POWER BI
+INTRODUCTION TO POWER BI
+    Introduction to Business Intelligence (BI)
+    Various BI tools
+    Introduction to Power BI
+    Why Power BI
+    Power BI Components
+    Introduction of Power BI Desktop
+    Installation of Power BI Desktop
+DATA VISUALIZATION 
+    Understanding Power View and Power Map
+    Data visualization techniques
+    Page layout & Formatting
+    Power BI Desktop visualization
+    Formatting and customizing visuals
+    Column chart, Pie chart, Donut chart,
+    Scatter chart, Funnel chart
+    Include & exclude
+    Geographical data visualization using Maps
+    Drill down
+    Drill through
+    Page navigations
+    Bookmarks
+    Selection pane to show/hide visuals
+    Comparing volume and value-based analytics
+    Combinations charts (dual axis charts)
+    Filter pane
+    Slicers
+    Use of Hierarchies in drill down analysis
+    Sync slicers
+    Tooltips & custom tooltips
+    Tables & matrix
+    Conditional formatting on visuals
+POWER BI SERVICE, PUBLISING & SHARING
+    Introduction to Power BI Service
+    Introduction of workspaces
+    Dashboard
+    Creating & Configuring Dashboards
+    Dashboard theme
+    Reports vs Dashboards
+    Sharing reports & dashboards
+DATA TRANSFORMATION – SHAPING & COMBINING DATA
+    Shaping data using Power Query Editor
+    Formatting data
+    Transformation of data
+    Understanding of Data types
+    Naming conventions & best practices to consider
+    Working with Parameters
+    Merge Query
+    Append Query
+    Group by of data (aggregation of data)
+    Duplicate & Reference tables
+    Fill
+    Pivot & Un-pivot of data
+    Custom columns
+    Conditional columns
+    Replace data from the tables
+    Split columns values
+        Move columns & sorting of data
+    Detect data type, count rows & reverse rows
+    Promote rows as column headers
+    Hierarchies in Power BI
+DATA MODELING & DAX
+    Introduction of relationships
+    Creating relationships
+    Cardinality
+    Cross filter direction
+    Use of inactive relationships
+    Introduction of DAX
+    Why DAX is used
+    DAX syntax
+    DAX functions
+    Context in DAX
+    Calculated columns using DAX
+        Measures using DAX
+    Calculated tables using DAX
+    Learning about table, information, logical, text, iterator,
+    Time intelligence functions (YTD, QTD, MTD)
+    Cumulative values, calculated tables, and ranking and rank over groups
+    Date and time functions
