@@ -15,8 +15,29 @@ A practical quick-reference for Excel formulas, cell references, data cleaning, 
 | Reliability | Handle calculation errors with `IFERROR` |
 | Productivity | Resize rows and columns, insert or delete cells, and paste values |
 
+## Snapshot
+
+### Most-used Excel tools
+
+- `XLOOKUP` / `VLOOKUP` — search values quickly
+- `SUMIFS` / `COUNTIFS` — summarize by conditions
+- `IF` / `IFS` — add logic and decision-making
+- `INDEX` + `MATCH` — flexible lookup alternative
+- `PivotTable` — fast summary and reporting
+- `TRIM` / `TEXTJOIN` / `CONCAT` — clean and combine text
+- `IFERROR` — avoid ugly spreadsheet errors
+
+### Quick real-world use
+
+```excel
+=XLOOKUP(A2, Sheet2!A:A, Sheet2!B:B, "Not Found")
+=SUMIFS(C:C, A:A, "Aman", B:B, "2026")
+=IFERROR(D2/E2, "No result")
+```
+
 ## Contents
 
+- [Quick Function Reference](#quick-function-reference)
 - [Formula and Function Basics](#formula-and-function-basics)
 - [Dynamic Array Formulas](#dynamic-array-formulas)
 - [Totals and Percentages](#totals-and-percentages)
@@ -28,6 +49,96 @@ A practical quick-reference for Excel formulas, cell references, data cleaning, 
 - [Keyboard Shortcuts](#keyboard-shortcuts)
 - [Practice Table](#practice-table)
 - [Suggested Study Flow](#suggested-study-flow)
+
+## Quick Function Reference
+
+### Sample Data for Examples
+
+Use this simple employee table for the examples below:
+
+| Employee ID | Name | Department | Salary | Score | Joining Date | Status |
+| --- | --- | --- | ---: | ---: | --- | --- |
+| 101 | Aman | Sales | 35000 | 82 | 15-01-2024 | Active |
+| 102 | Neha | HR | 42000 | 90 | 05-07-2023 | Active |
+| 103 | Ravi | IT | 48000 | 76 | 10-02-2024 | Active |
+| 104 | Pooja | Sales | 39000 | 88 | 12-12-2023 | On Leave |
+| 105 | Simran | Finance | 55000 | 95 | 20-03-2024 | Active |
+
+### Lookup & Reference
+
+- VLOOKUP — Look up a value in the first column of a range. Example: `=VLOOKUP(102, A2:G6, 4, FALSE)` returns `42000`.
+- HLOOKUP — Same as VLOOKUP but horizontal. Example: `=HLOOKUP("Salary", A1:G1, 3, FALSE)` returns the value from the Salary column in row 3.
+- INDEX — Return a value at a given row/column position. Example: `=INDEX(D2:D6, 3)` returns `48000`.
+- MATCH — Return the position of a value in a range. Example: `=MATCH(104, A2:A6, 0)` returns `4`.
+- INDEX + MATCH — Flexible lookup combo. Example: `=INDEX(B2:B6, MATCH(105, A2:A6, 0))` returns `Simran`.
+- XLOOKUP — Modern replacement for VLOOKUP/HLOOKUP. Example: `=XLOOKUP(103, A2:A6, C2:C6)` returns `IT`.
+- OFFSET — Return a reference shifted from a starting point. Example: `=OFFSET(A2, 2, 3)` points to the cell 2 rows down and 3 columns right from `A2`.
+- CHOOSE — Pick a value from a list by index number. Example: `=CHOOSE(2, "Aman", "Neha", "Ravi", "Pooja", "Simran")` returns `Neha`.
+- INDIRECT — Convert text into a cell reference. Example: `=INDIRECT("B"&3)` returns the value in cell `B3`.
+
+### Math & Aggregation
+
+- SUM — Add values. Example: `=SUM(D2:D6)` returns `219000`.
+- SUMIF — Sum values for one condition. Example: `=SUMIF(C2:C6, "Sales", D2:D6)` returns `74000`.
+- SUMIFS — Sum with multiple conditions. Example: `=SUMIFS(D2:D6, C2:C6, "Sales", F2:F6, "Active")` returns `35000`.
+- AVERAGE — Mean of values. Example: `=AVERAGE(E2:E6)` returns `86.2`.
+- AVERAGEIF — Average for one condition. Example: `=AVERAGEIF(C2:C6, "IT", E2:E6)` returns `76`.
+- AVERAGEIFS — Average with multiple conditions. Example: `=AVERAGEIFS(E2:E6, C2:C6, "Sales", G2:G6, "Active")` returns `85`.
+- COUNT — Count numeric cells. Example: `=COUNT(E2:E6)` returns `5`.
+- COUNTA — Count non-empty cells. Example: `=COUNTA(B2:B6)` returns `5`.
+- COUNTIF — Count values meeting one condition. Example: `=COUNTIF(C2:C6, "Sales")` returns `2`.
+- COUNTIFS — Count values with multiple conditions. Example: `=COUNTIFS(C2:C6, "Sales", G2:G6, "Active")` returns `1`.
+- ROUND / ROUNDUP / ROUNDDOWN — Control decimal precision. Example: `=ROUND(85.678, 1)` returns `85.7`.
+- SUBTOTAL — Aggregate while ignoring filtered rows. Example: `=SUBTOTAL(9, D2:D6)` gives total of visible values.
+- PRODUCT — Multiply values. Example: `=PRODUCT(E2:E6)` multiplies all five scores.
+
+### Logical
+
+- IF — Conditional logic. Example: `=IF(E2>=85, "High Performer", "Needs Improvement")` returns `High Performer` for Aman.
+- IFS — Evaluate multiple conditions efficiently. Example: `=IFS(E2>=90, "Excellent", E2>=80, "Good", TRUE, "Average")` returns `Good` for Aman.
+- AND — True if all conditions pass. Example: `=AND(E2>=80, C2="Sales")` returns `TRUE` for Aman.
+- OR — True if any condition passes. Example: `=OR(C2="HR", E2>=90)` returns `TRUE` for Neha.
+- NOT — Reverse a logical value. Example: `=NOT(E2<80)` returns `TRUE` for Aman.
+- IFERROR — Handle errors gracefully. Example: `=IFERROR(D2/E2, "Invalid")` avoids a divide-by-zero or invalid calculation.
+- IFNA — Handle #N/A errors specifically. Example: `=IFNA(XLOOKUP(106, A2:A6, B2:B6), "Not Found")` returns `Not Found`.
+- NESTED IF — Multiple layered conditions. Example: `=IF(E2>=90, "Excellent", IF(E2>=80, "Good", "Average"))` returns `Good` for Aman.
+
+### Text Functions
+
+- CONCATENATE / CONCAT — Join text strings. Example: `=CONCAT(B2, " - ", C2)` returns `Aman - Sales`.
+- TEXTJOIN — Join text with a delimiter, skipping blanks. Example: `=TEXTJOIN(" | ", TRUE, B2:C2)` returns `Aman | Sales`.
+- LEFT / RIGHT / MID — Extract text. Example: `=LEFT(B2, 3)` returns `Ama`.
+- LEN — Length of text string. Example: `=LEN(B2)` returns `4` for Aman.
+- TRIM — Remove extra spaces. Example: `=TRIM("  Aman   Yadav  ")` returns `Aman Yadav`.
+- UPPER / LOWER / PROPER — Change text case. Example: `=UPPER(B2)` returns `AMAN`.
+- SUBSTITUTE — Replace specific text. Example: `=SUBSTITUTE(B2, "A", "X")` changes Aman to Xman.
+- FIND / SEARCH — Locate text within a string. Example: `=FIND("n", B2)` returns `2` for Aman.
+- TEXT — Format numbers and dates as text. Example: `=TEXT(D2, "$#,##0")` returns `$35,000`.
+
+### Date & Time
+
+- TODAY() / NOW() — Current date and time. Example: `=TODAY()` returns the current date.
+- DATE — Build a date from year/month/day. Example: `=DATE(2026, 9, 19)` returns the date `19-09-2026`.
+- DATEDIF — Difference between two dates. Example: `=DATEDIF(F2, TODAY(), "Y")` returns years since joining.
+- EOMONTH — Last day of a month. Example: `=EOMONTH(TODAY(), 0)` returns the end of the current month.
+- NETWORKDAYS — Working days between two dates. Example: `=NETWORKDAYS(F2, TODAY())` returns working days since joining.
+- WORKDAY — Date after adding working days. Example: `=WORKDAY(TODAY(), 10)` returns 10 working days from today.
+
+### Financial
+
+- NPV — Net present value. Example: `=NPV(10%, 1000, 1500, 2000)` calculates the present value of future cash flows.
+- IRR — Internal rate of return. Example: `=IRR({-5000, 2000, 3000, 4000})` estimates the project return rate.
+- PMT — Loan or EMI payment calculation. Example: `=PMT(8%/12, 12, 100000)` estimates the monthly EMI.
+- FV / PV — Future value / present value. Example: `=FV(8%/12, 12, -500, 0)` calculates the future value of monthly savings.
+
+### Data Analysis / Modern Tools
+
+- PivotTables + GETPIVOTDATA + UNIQUE + SORT + FILTER — Dynamic arrays and data summarization. Example: `=UNIQUE(C2:C6)` returns the department names without repetition.
+- GETPIVOTDATA — Pull values from a PivotTable. Example: `=GETPIVOTDATA("Salary", $A$1, "Department", "Sales")` returns the Sales total from the PivotTable.
+- SORT — Sort values. Example: `=SORT(B2:B6)` sorts employee names alphabetically.
+- FILTER — Filter values to match a condition. Example: `=FILTER(B2:B6, C2:C6="Sales")` returns `Aman` and `Pooja`.
+
+> In real-world reporting work, VLOOKUP or XLOOKUP, SUMIFS, COUNTIFS, IF, IFERROR, INDEX-MATCH, and PivotTables are the most commonly used Excel tools for dashboards, finance, and operational reports.
 
 ## Formula and Function Basics
 

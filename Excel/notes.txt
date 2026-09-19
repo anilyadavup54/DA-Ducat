@@ -1,4 +1,66 @@
-----------Function----------
 
+## Lookup & Reference (finding data)
+1. **VLOOKUP** – Look up a value in the first column of a range
+2. **HLOOKUP** – Same as VLOOKUP but horizontal
+3. **INDEX** – Return a value at a given row/column position
+4. **MATCH** – Return the position of a value in a range
+5. **INDEX + MATCH** – Combo, more flexible than VLOOKUP
+6. **XLOOKUP** – Modern replacement for VLOOKUP/HLOOKUP (Excel 365/2021+)
+7. **OFFSET** – Return a reference shifted from a starting point
+8. **CHOOSE** – Pick a value from a list based on index number
+9. **INDIRECT** – Convert text into a cell reference
 
-----------Formula-----------
+## Math & Aggregation
+10. **SUM** – Add values
+11. **SUMIF** – Sum with one condition
+12. **SUMIFS** – Sum with multiple conditions
+13. **AVERAGE** – Mean of values
+14. **AVERAGEIF** – Average with one condition
+15. **AVERAGEIFS** – Average with multiple conditions
+16. **COUNT** – Count numeric cells
+17. **COUNTA** – Count non-empty cells
+18. **COUNTIF** – Count with one condition
+19. **COUNTIFS** – Count with multiple conditions
+20. **ROUND / ROUNDUP / ROUNDDOWN** – Control decimal precision
+21. **SUBTOTAL** – Aggregate that ignores filtered/hidden rows
+22. **PRODUCT** – Multiply values
+
+## Logical
+23. **IF** – Conditional logic
+24. **IFS** – Multiple conditions without nesting
+25. **AND** – True if all conditions are true
+26. **OR** – True if any condition is true
+27. **NOT** – Reverses a logical value
+28. **IFERROR** – Handle errors gracefully
+29. **IFNA** – Handle #N/A errors specifically
+30. **NESTED IF** – Multiple layered conditions (older approach, still common)
+
+## Text Functions
+31. **CONCATENATE / CONCAT** – Join text strings
+32. **TEXTJOIN** – Join text with a delimiter, skipping blanks
+33. **LEFT / RIGHT / MID** – Extract part of a text string
+34. **LEN** – Length of text string
+35. **TRIM** – Remove extra spaces
+36. **UPPER / LOWER / PROPER** – Change text case
+37. **SUBSTITUTE** – Replace specific text
+38. **FIND / SEARCH** – Locate position of text within a string
+39. **TEXT** – Format numbers/dates as text
+
+## Date & Time
+40. **TODAY() / NOW()** – Current date/time
+41. **DATE** – Build a date from year/month/day
+42. **DATEDIF** – Difference between two dates
+43. **EOMONTH** – Last day of a month (useful for reporting periods)
+44. **NETWORKDAYS** – Working days between two dates
+45. **WORKDAY** – Date after adding working days
+
+## Financial (very common in corporate finance)
+46. **NPV** – Net present value
+47. **IRR** – Internal rate of return
+48. **PMT** – Loan/EMI payment calculation
+49. **FV / PV** – Future value / present value
+
+## Data Analysis / Modern Tools
+50. **PivotTables + GETPIVOTDATA / UNIQUE / SORT / FILTER** – Dynamic arrays and data summarization (Excel 365)
+
+**Most used in real corporate work day-to-day:** VLOOKUP/XLOOKUP, SUMIFS, COUNTIFS, IF, IFERROR, INDEX-MATCH, and PivotTables — these alone cover 80% of reporting, dashboards, and finance tasks.
