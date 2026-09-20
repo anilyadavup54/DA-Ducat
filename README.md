@@ -1,48 +1,72 @@
 # DA-Ducat
 
-Study notes and practice material from a data analytics course. The repository is organized by subject and currently combines written notes, Python exercises, a Jupyter notebook, and recorded lectures.
+Course notes, exercises, and data-analytics projects collected while studying data science and analytics.
 
-## Repository Contents
+## Repository Structure
 
-| Folder | Contents |
+| Path | Contents |
 | --- | --- |
-| `Excel/` | Excel formulas, cell references, keyboard shortcuts, text cleanup, error handling, and data-cleaning notes. |
-| `Power BI/` | Placeholder notes for Power BI. |
-| `Python/` | Python fundamentals, practice exercises, a notebook, and a student-management program. |
-| `Python/Lectures/` | Recorded lecture videos from 7 and 8 September. |
-| `SQL/` | Placeholder notes for SQL. |
-| `Statistics/` | Placeholder notes for Statistics. |
+| `Excel/` | Excel formulas, references, shortcuts, text cleanup, error handling, and data-cleaning notes. |
+| `Power BI/` | Power BI study notes and syllabus material. |
+| `Python/` | Python notes, exercises, a Jupyter notebook, and a student-management example. |
+| `SQL/` | SQL study notes and syllabus material. |
+| `Statistics & Analytics/` | Statistics and analytics notes, syllabus material, and a notebook. |
+| `ML/` | Machine-learning study material. |
+| `Deep Learning & Neural Networks/` | Deep-learning notes and syllabus material. |
+| `Project/` | Campus placement analytics prototype and its supporting documentation. |
 
-## Python Topics
+## Python Learning Material
 
-`Python/D_Notes.ipynb` contains progressive examples and exercises covering:
+`Python/D_Notes.ipynb` contains examples and exercises covering:
 
-- Comparison, logical, membership, identity, walrus, and bitwise operators
-- Strings, lists, tuples, dictionaries, nested dictionaries, and sets
-- Type casting and common collection methods
-- Conditional statements, ternary expressions, and `match`/`case`
-- `while` and `for` loops, nested loops, and jump statements
-- Number exercises including tables, factorials, prime checks, averages, and Fibonacci series
-- String formatting, iterators, list comprehensions, functions, recursion, `lambda`, `map`, `filter`, and `functools.reduce`
-- A student-management system project
+- Operators, strings, collections, type casting, and common methods
+- Conditional statements, `match`/`case`, loops, and jump statements
+- Number problems such as factorials, prime checks, averages, and Fibonacci series
+- Formatting, iterators, comprehensions, functions, recursion, `lambda`, `map`, `filter`, and `reduce`
+- A student-management system
 
-The notebook is a collection of learning examples. Its cells are not all intended to be run as one script, and several cells require input from the user.
-
-## Running the Python Program
-
-The standalone student-management example is in `Python/Test.py` and uses only the Python standard library.
+Run the standalone student-management example with Python 3.10 or newer:
 
 ```bash
 python Python/Test.py
 ```
 
-The program can display, add, remove, and search student records. Use Python 3.10 or newer because the code uses structural pattern matching with `match`/`case`.
+Open the notebook in VS Code or Jupyter and run cells individually. Some cells are interactive and are not designed to run as one script.
 
-To work through the notebook, open `Python/D_Notes.ipynb` in VS Code or Jupyter with a Python 3 kernel, then run cells individually.
+## Campus Placement Analytics
+
+The `Project/` directory contains a Python and MySQL prototype for analyzing engineering placement outcomes. It works with `Project/indian_engineering_placement_2026.csv` and is organized into:
+
+- `Database.py`: creates the database, cleans CSV data, loads the `students` table, and runs queries.
+- `query_builder.py`: builds parameterized filters for tiers, branches, CGPA, DSA scores, and placement status.
+- `analytics.py`: calculates DSA-based salary curves and college-tier comparisons.
+- `docs/`: project requirements, architecture, design notes, rules, memory, and task tracking.
+
+### Project Prerequisites
+
+- Python 3.10 or newer
+- MySQL running locally
+- Python packages: `pandas`, `numpy`, `SQLAlchemy`, and `PyMySQL`
+
+Install the packages in the active Python environment:
+
+```bash
+python -m pip install pandas numpy SQLAlchemy PyMySQL
+```
+
+Before running the database workflow, update the MySQL settings and CSV path at the top of `Project/Database.py`. The current file contains development credentials and a machine-specific Windows path, so do not use those values in production or commit real credentials.
+
+To load the dataset:
+
+```bash
+cd Project
+python Database.py
+```
+
+The analytics module expects the `students` table to exist and is intended to be imported after the database has been initialized.
 
 ## Current Status
 
-- Python notes and exercises are the most complete part of the repository.
-- Excel notes are available but informal and still contain unfinished items.
-- Power BI, SQL, and Statistics folders currently contain subject headings/placeholders and are ready for additional notes.
-- No dependency or build configuration is required at present.
+- Python and Excel materials are the most developed study sections.
+- The placement analytics prototype has a documented ingestion, query, and analytics design, but it still requires local MySQL configuration and further testing before production use.
+- The remaining subject folders contain ongoing notes and syllabus material.
