@@ -1,46 +1,38 @@
-# print(a:=10.55)
-
-# Tuples function and methods
-# len()
-# min()
-# max()
-# .index()
-# .count()
-
-# tup=(2,3,4,5,6,7,8,9,10)
-# for i in range(10):
-#     print(tup[i])
-
-# data1=(1,2,10,10,3,4,5)
-# data2=('x','y','z,')
-# data3=(10,20,'aman',34.5)
-# data4=("a", 10,16.5)
-
-# print(data1[0])
-# print(data2[0])
-# print(data3[0])
-# print(data4[0])
-
-# print(min(data1))
-# print(max(data1))
-# print(len(data2))
-# print(data1.count(10))
-# print(data1.index(10))
-# print("H")
+# Student Management System
+import json
+from pathlib import Path
 
 
+DATA_FILE = Path(__file__).with_name("data2.json")
 
-#Student Management System
-student_data = [ {"name": "anil", "age": 20},
-                 {"name": "aman", "age": 22},
-                 {"name": "ankit", "age": 21}]
+
+def load_data():
+    try:
+        with DATA_FILE.open("r", encoding="utf-8") as file:
+            return json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
+def save_data(student_data):
+    with DATA_FILE.open("w", encoding="utf-8") as file:
+        json.dump(student_data, file, indent=4)
+
+
+student_data = load_data()
+
+
 def viewdata():
     print("Student Data:\nNAME - AGE")
     for student in student_data:
-        print(student.get("name"), "-", student.get("age"))
+        print(student["name"], "-", student["age"])
+
 
 def adddata():
-    name = input("Enter student name: ")
+    name = input("Enter student name: ").strip()
+    if not name:
+        print("Name cannot be empty.")
+        return
     try:
         age = int(input("Enter student age: "))
     except ValueError:
@@ -48,13 +40,16 @@ def adddata():
         return
     student_data.append({"name": name, "age": age})
     student_data.sort(key=lambda x: x["name"].lower())
+    save_data(student_data)
     print("Student added successfully.")
 
+
 def removedata():
-    name = input("Enter student name to remove: ")
+    name = input("Enter student name to remove: ").strip().lower()
     for student in student_data:
-        if student["name"] == name:
+        if student["name"].lower() == name:
             student_data.remove(student)
+            save_data(student_data)
             print("Student removed successfully.")
             return
     print("Student not found.")
@@ -63,20 +58,28 @@ def removedata():
 def searchdata():
     name = input("Enter student name to search: ").lower()
     for student in student_data:
-        if student["name"] == name:
+        if student["name"].lower() == name:
             print("Student found:", student)
             return
     print("Student not found.")
 
 
+print("Welcome to the Student Management System\n")
+while True:
+    try:
+        choice = int(input(
+            "1. View student list\n"
+            "2. Add new student\n"
+            "3. Remove student\n"
+            "4. Search student\n"
+            "5. Exit\n"
+            "Enter your choice: "
+        ))
+    except ValueError:
+        print("Please enter a number from 1 to 5.")
+        continue
 
-
-print("Welcome to the Student Management System \n")
-flag=True
-while flag:
-    chr=int(input("1. To view student list\n 2. To add new list \n 3. To remove the data \n 4. To search th data \n 5. Exit\n"))
-    flag=False
-    match chr:
+    match choice:
         case 1:
             viewdata()
         case 2:
@@ -87,18 +90,13 @@ while flag:
             searchdata()
         case 5:
             print("Thank you for using the Student Management System.")
-            exit()
+            break
         case _:
-            print("Not Present")
-    print("Do you want to continue? (y/n)")
-    choice = input().lower()
-    if choice == 'y':
-        flag = True
-    else:
-        print("Thank you for using the Student Management System.")
-        exit()
+            print("Invalid choice.")
+
+    print()
 
 
-    
+
 
 
