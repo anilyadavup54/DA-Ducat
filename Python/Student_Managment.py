@@ -115,7 +115,7 @@ def searchdata():
     print("Student not found.")
 
 
-print("Welcome to the Student Management System\n")
+print("--------Welcome to the Student Management System--------\n")
 while True:
     try:
         choice = int(input(
