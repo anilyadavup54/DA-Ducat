@@ -49,7 +49,51 @@ RDBMS avoided the navigation model as in old DBMS and intoduced relation model. 
 
 | DBMS | RDBMS |
 | ----- | ------|
-| 1.   |   |
+| 1. Data store in file  | 1. Data store in tabular  |
+| 2. It does not support client server architercture | 2. It support CSA  |
+| 3. NF not possible  | 3. NF Present  |
+| 4. It allow one user to access at a time | 4. More than 1 user  |
+| 5. Hierarchical arrangment of data | 5. store data in row and columns  |
+| 6. Low software and hardware used | 6. Higher hardware and software used  |
+| 7. ACID not support | 7. Support ACID |
+| 8. Data redundancy | 8. Remove data redundancy |
+
+### ACID-> Atomiticy, Consistency, Isolation, Durability
+
+# Basic SQL Commands
+### SQL commands can be classified into 5 Categories-
+1. DDL -( CREATE, ALTER, DROP, TRUNCAT, RENAME )
+2. DML -( INSERT, UPDATE, DELETE, MERGE(It not work in mysql , present in oracle SQL Server) )
+3. DCL -( LOCK, GRANT, REVOKE )
+4. TCL -( ROLLBACK, COMMIT, SAVEPOINT, START TRANSATION )
+5. DQL -( SELECT )
+6. ADMINISTRATIVE COMMANDS-> SHOW, EXPLAIN(Only MySql), DESC, USE etc...
+
+## DATA TYPES-
+1. Numeric Datatype
+2. Date and time
+3. String/ Charecters
+4. Boolean
+5. Binary
+6. Special
+
+| Data Type |	Description	 | Range |
+|---------|-----|------|
+| BIGINT |	Large integer numbers 8 Byte |	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+| INT |	Standard integer values 4 Byte |	-2,147,483,648 to 2,147,483,647 |
+| SMALLINT |	Small integers |	-32,768 to 32,767 |
+| MEDIUMINT |       |            |
+| TINYINT |	Very small integers |	0 to 255 or -128 to 127 |
+| DECIMAL |	Exact fixed-point numbers (e.g., for financial values) |	-10^38 + 1 to 10^38 - 1 |
+| NUMERIC |	Similar to DECIMAL, used for precision data |	-10^38 + 1 to 10^38 - 1 |
+
+### DDL -( CREATE ALTER DROP TRUNCAT RENAME )
+
+
+```sql
+CREATE DATABASE IF NOT EXISTS training_db;
+USE training_db;
+```
 
 ```
 {
