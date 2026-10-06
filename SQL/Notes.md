@@ -46,3 +46,15 @@ RDBMS avoided the navigation model as in old DBMS and intoduced relation model. 
 - It can processs a singler records as well as set of records at a time.
 - All SQL statement define what is to be done rather than how it is to be done.
 -  SQL has facilities for defining database views, security, transaction etc.
+
+| DBMS | RDBMS |
+| ----- | ------|
+| 1.   |   |
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
