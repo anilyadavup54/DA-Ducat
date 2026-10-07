@@ -73,7 +73,7 @@ RDBMS avoided the navigation model as in old DBMS and intoduced relation model. 
 1. Numeric Datatype
 2. Date and time
 3. String/ Charecters
-4. Boolean
+4. Boolean (True/False)
 5. Binary
 6. Special
 
@@ -86,6 +86,39 @@ RDBMS avoided the navigation model as in old DBMS and intoduced relation model. 
 | TINYINT |	Very small integers |	0 to 255 or -128 to 127 |
 | DECIMAL |	Exact fixed-point numbers (e.g., for financial values) |	-10^38 + 1 to 10^38 - 1 |
 | NUMERIC |	Similar to DECIMAL, used for precision data |	-10^38 + 1 to 10^38 - 1 |
+
+### Date and time
+1. Date
+2. time
+3. datetime
+4. timestamp
+5. year
+6. day
+7. month
+
+### String/ Charecters
+1. Char:- Fixed length data type
+2. Varchar:- Variable length data type
+- It store only number or alphabet or combination of it.
+
+```sql
+CREATE TABLE emp( id, int, name char(30), age int, profile varchar(30), salary float );
+```
+
+| Value	| CHAR(4) |	Storage Required | VARCHAR(4) |	Storage Required |
+|-------|-------|--------|-------|-----|
+| ''    |	'    ' |	4 bytes |	''   |	1 byte  |
+| 'ab'  |	'ab  ' |	4 bytes |	'ab' |	3 bytes |
+| 'abcd' |	'abcd' |	4 bytes |	'abcd' |	5 bytes |
+| 'abcdefgh' |	'abcd' |	4 bytes |	'abcd' |	5 bytes |
+
+### Char Imp:- In char we store those kind of data which have fixed size in table. (Ex. Gender, RTO, True/False)
+
+
+```sql
+CREATE TABLE emp( id, int, name varchar(30), age int, profile varchar(30), salary float );
+```
+; -> Delimiter
 
 ### DDL -( CREATE ALTER DROP TRUNCAT RENAME )
 
