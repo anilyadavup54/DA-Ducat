@@ -128,6 +128,48 @@ CREATE DATABASE IF NOT EXISTS training_db;
 USE training_db;
 ```
 
+### commands 
+
+```sql
+USE db_name
+-- How to find out current selected DB
+SELECT DATABASE();
+
+-- How to create new table for selected DB
+CREATE TABLE table_name(
+  empId INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  dept TEXT NOT NULL,
+  age INTEGER,
+  Salary FLOAT,
+  City VARCHAR(20)
+);
+
+-- How to select Stc of emp table
+explain DB_name;
+desc DB_name;
+
+-- How to see all tables in DB
+show TABLES;
+
+-- How to insert records in DB
+-- Single Records
+INSERT INTO EMPLOYEE VALUES (0001, 'Clark', 'Sales',20,4000,'Delhi');
+INSERT INTO EMPLOYEE VALUES (0002, 'Dave', 'Accounting',20,4000,'Delhi');
+INSERT INTO EMPLOYEE VALUES (0003, 'Ava', 'Sales',20,4000,'Delhi');
+
+-- Multiple Records insert
+INSERT INTO EMPLOYEE VALUES (0001, 'Clark', 'Sales',20,4000,'Delhi'),(0002, 'Dave', 'Accounting',20,4000,'Delhi'),(0003, 'Ava', 'Sales',20,4000,'Delhi');
+
+-- How to display all records of EMPLOYEE tables
+SELECT * FROM EMPLOYEE;
+
+-- How to see perticular one column
+SELECT name FROM EMPLOYEE;
+
+
+```
+
 ```
 {
   "firstName": "John",
