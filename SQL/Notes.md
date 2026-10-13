@@ -167,6 +167,16 @@ SELECT * FROM EMPLOYEE;
 -- How to see perticular one column
 SELECT name FROM EMPLOYEE;
 
+-- How to insert vallues only given columns
+INERT INTO EMPLOYEE (empID, name, age) VALUES(200, 'amit', 58);
+
+-- How to update records
+UPDATE EMPLOYEE SET name='amit' WHERE empID=0001;
+
+-- How to delete records from employee table
+DELETE FROM EMPOLYEE WHERE empID=0001;
+DELETE FROM EMPOLYEE WHERE city='dehi';
+DELETE FROM EMPOLYEE;
 
 ```
 
