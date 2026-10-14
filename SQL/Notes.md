@@ -179,6 +179,69 @@ DELETE FROM EMPOLYEE WHERE city='dehi';
 DELETE FROM EMPOLYEE;
 
 ```
+# 13/10/2026
+
+
+# 14/10/2026
+
+### What is diff between truncate and delete
+1. 
+2. 
+3. Rollback work only delete not on truncate.
+
+### What is diff between Delete and drop
+1. In drop delete table and strcture but delete only data not strcuture.
+
+### What is diff between Truncate and drop
+1. In truncate delete only table not strcture but in drop delete both.
+
+### How to drop database
+mysql> DROP DATABASE database_name;
+
+```sql
+truncate table emp;
+desc emp;
+drop emp;
+select * emp;
+
+```
+# Operators in MYSQL
+In mysql operators are in different types
+1. Retrivening Records Using Arithmetical Operators:-
++, _ , / , %, *
+2. Retriveing Records using Comparision Operator:-
+=,<=,>=,!=,<,>
+3. Retriving Reocrds using logical operators:-
+AND, OR, NOT
+
+4. Retriving Records using like & not like operator:-
+LIKE, NOT LIKE ( It used for pattern matching )
+ 
+
+```sql
+-- How to increment 3000 salary in existing salary
+UPDATE emp SET salary=salary+3000;
+
+-- How to decrement 3000 salary in existing salary
+UPDATE emp SET salary=salary-3000;
+SELECT *,price*qty as 'total_sales'
+
+-- How to multiply 3X salary in existing salary
+UPDATE emp SET salary=salary*3;
+
+-- How to Divide 1/2 salary in existing salary
+UPDATE emp SET salary=salary/2;
+
+-- Comparision Operator - It work with string and numeric
+SELECT * from emp WHERE name='raj';
+SELECT * from emp WHERE salary!=40000;
+
+SELECT * FROM emp WHERE name='raj' and age=30;
+
+
+```
+
+
 
 ```
 {
