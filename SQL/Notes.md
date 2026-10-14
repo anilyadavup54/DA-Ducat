@@ -1,249 +1,303 @@
-# SQL 
-## It's stand for structured query language, Definition of Database:- It's a collection of information that can be organized so that it can be access, managed and updated.
+# SQL
 
-### In database all info stored in tabular formet, tables are divided into row and columns horizontal line called row and vertical linecalled columns.
+## SQL stands for Structured Query Language
+
+Definition of Database: A collection of information that can be organized so it can be accessed, managed, and updated.
+
+In a database, information is stored in tabular format. Tables are divided into rows and columns. Rows are horizontal and columns are vertical.
 
 | id | name | age | salary |
-| ----------- | ----------- | ----------- | ----------- |
+| --- | --- | --- | --- |
 | 123 | anil | 20 | 20K |
 | 123 | amit | 22 | 21K |
 | 123 | ankit | 25 | 34K |
 | 123 | anita | 30 | 56K |
 
-Each row are also called record sample are tuples, Each colums are also called fields attributes or features.
+Each row is also called a record or tuple. Each column is also called a field, attribute, or feature.
 
-Database -> Schema
-Table-> Entity
+- Database -> Schema
+- Table -> Entity
 
+### Fields -> Records -> Tables -> Database
 
-### Fields -> Records-> Tables-> Database
-- A collection of fields are called records
-- A collection of records are called Table
-- A collection of Tables are called Database
+- A collection of fields is called a record.
+- A collection of records is called a table.
+- A collection of tables is called a database.
 
-### Table-> It's the strct inside database that contains data, organized in columns.
-### Columns-> The name of each column in a table is used to interpret its meaning and is called an attributes.
-### Row-> Each row in a table represents a record and is called a tuple.
-### RDBMS -> 
-RDBMS avoided the navigation model as in old DBMS and intoduced relation model. The relation model has relationship b/w tables using primary keys, foreign keys, and indexes. Thus the teaching and storing of data become faster then the old Navigational model. RDBMS is useful to efficenttly manage vast amount of data and is used in large business appliction.
-1. Oracle, 
-2. Ms SQL Server DB 
-3. MySQl,
-4. SQLite3,
-5. MariaDB,
-6. PostgreaSQl,
+### Table
+
+A table is the structure inside a database that contains data, organized in columns.
+
+### Columns
+
+The name of each column in a table is used to interpret its meaning and is called an attribute.
+
+### Row
+
+Each row in a table represents a record and is called a tuple.
+
+### RDBMS
+
+RDBMS avoids the navigation model used in old DBMS and introduces the relational model. The relational model defines relationships between tables using primary keys, foreign keys, and indexes. This makes data storage and retrieval faster than the old navigational model. RDBMS is useful for efficiently managing large amounts of data and is used in large business applications.
+
+1. Oracle
+2. Microsoft SQL Server
+3. MySQL
+4. SQLite3
+5. MariaDB
+6. PostgreSQL
 7. MS Access
 
-### DBMS -> It's allow the access to the data in the database.
+### DBMS
+
+DBMS allows access to the data in a database.
+
 1. FoxPro
 2. LibreOffice
 3. dBase
 
-### SQL generally operate on rlational databse
+### SQL generally operates on relational databases
+
 ### Features of SQL
-- It's a non prodedural language.
-- It's an English-like lamguage
-- It can processs a singler records as well as set of records at a time.
-- All SQL statement define what is to be done rather than how it is to be done.
--  SQL has facilities for defining database views, security, transaction etc.
+
+- It is a non-procedural language.
+- It is an English-like language.
+- It can process a single record as well as a set of records at a time.
+- All SQL statements define what is to be done rather than how it is to be done.
+- SQL has facilities for defining database views, security, transactions, etc.
 
 | DBMS | RDBMS |
-| ----- | ------|
-| 1. Data store in file  | 1. Data store in tabular  |
-| 2. It does not support client server architercture | 2. It support CSA  |
-| 3. NF not possible  | 3. NF Present  |
-| 4. It allow one user to access at a time | 4. More than 1 user  |
-| 5. Hierarchical arrangment of data | 5. store data in row and columns  |
-| 6. Low software and hardware used | 6. Higher hardware and software used  |
-| 7. ACID not support | 7. Support ACID |
-| 8. Data redundancy | 8. Remove data redundancy |
+| --- | --- |
+| Data stored in files | Data stored in tabular form |
+| Does not support client-server architecture | Supports client-server architecture |
+| NF not possible | NF present |
+| Allows one user to access at a time | Allows multiple users |
+| Hierarchical arrangement of data | Data stored in rows and columns |
+| Low software and hardware requirements | Higher software and hardware requirements |
+| ACID not supported | Supports ACID |
+| Data redundancy | Removes data redundancy |
 
-### ACID-> Atomiticy, Consistency, Isolation, Durability
+### ACID
 
-# Basic SQL Commands
-### SQL commands can be classified into 5 Categories-
-1. DDL -( CREATE, ALTER, DROP, TRUNCAT, RENAME )
-2. DML -( INSERT, UPDATE, DELETE, MERGE(It not work in mysql , present in oracle SQL Server) )
-3. DCL -( LOCK, GRANT, REVOKE )
-4. TCL -( ROLLBACK, COMMIT, SAVEPOINT, START TRANSATION )
-5. DQL -( SELECT )
-6. ADMINISTRATIVE COMMANDS-> SHOW, EXPLAIN(Only MySql), DESC, USE etc...
+ACID stands for Atomicity, Consistency, Isolation, and Durability.
 
-## DATA TYPES-
-1. Numeric Datatype
+## Basic SQL Commands
+
+### SQL commands can be classified into 5 categories
+
+1. DDL - CREATE, ALTER, DROP, TRUNCATE, RENAME
+2. DML - INSERT, UPDATE, DELETE, MERGE (not supported in MySQL, but present in Oracle and SQL Server)
+3. DCL - LOCK, GRANT, REVOKE
+4. TCL - ROLLBACK, COMMIT, SAVEPOINT, START TRANSACTION
+5. DQL - SELECT
+6. Administrative commands - SHOW, EXPLAIN (MySQL only), DESC, USE, etc.
+
+## Data Types
+
+1. Numeric datatype
 2. Date and time
-3. String/ Charecters
+3. String/characters
 4. Boolean (True/False)
 5. Binary
 6. Special
 
-| Data Type |	Description	 | Range |
-|---------|-----|------|
-| BIGINT |	Large integer numbers 8 Byte |	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
-| INT |	Standard integer values 4 Byte |	-2,147,483,648 to 2,147,483,647 |
-| SMALLINT |	Small integers |	-32,768 to 32,767 |
-| MEDIUMINT |       |            |
-| TINYINT |	Very small integers |	0 to 255 or -128 to 127 |
-| DECIMAL |	Exact fixed-point numbers (e.g., for financial values) |	-10^38 + 1 to 10^38 - 1 |
-| NUMERIC |	Similar to DECIMAL, used for precision data |	-10^38 + 1 to 10^38 - 1 |
+| Data Type | Description | Range |
+| --- | --- | --- |
+| BIGINT | Large integer numbers (8 bytes) | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+| INT | Standard integer values (4 bytes) | -2,147,483,648 to 2,147,483,647 |
+| SMALLINT | Small integers | -32,768 to 32,767 |
+| MEDIUMINT | Medium-sized integers | -8,388,608 to 8,388,607 |
+| TINYINT | Very small integers | 0 to 255 or -128 to 127 |
+| DECIMAL | Exact fixed-point numbers (e.g., financial values) | -10^38 + 1 to 10^38 - 1 |
+| NUMERIC | Similar to DECIMAL, used for precision data | -10^38 + 1 to 10^38 - 1 |
 
 ### Date and time
+
 1. Date
-2. time
-3. datetime
-4. timestamp
-5. year
-6. day
-7. month
+2. Time
+3. Datetime
+4. Timestamp
+5. Year
+6. Day
+7. Month
 
-### String/ Charecters
-1. Char:- Fixed length data type
-2. Varchar:- Variable length data type
-- It store only number or alphabet or combination of it.
+### String/characters
 
-```sql
-CREATE TABLE emp( id, int, name char(30), age int, profile varchar(30), salary float );
-```
+1. CHAR - Fixed-length data type
+2. VARCHAR - Variable-length data type
 
-| Value	| CHAR(4) |	Storage Required | VARCHAR(4) |	Storage Required |
-|-------|-------|--------|-------|-----|
-| ''    |	'    ' |	4 bytes |	''   |	1 byte  |
-| 'ab'  |	'ab  ' |	4 bytes |	'ab' |	3 bytes |
-| 'abcd' |	'abcd' |	4 bytes |	'abcd' |	5 bytes |
-| 'abcdefgh' |	'abcd' |	4 bytes |	'abcd' |	5 bytes |
-
-### Char Imp:- In char we store those kind of data which have fixed size in table. (Ex. Gender, RTO, True/False)
-
+- It stores only numbers, alphabets, or a combination of both.
 
 ```sql
-CREATE TABLE emp( id, int, name varchar(30), age int, profile varchar(30), salary float );
+CREATE TABLE emp (
+  id INT,
+  name CHAR(30),
+  age INT,
+  profile VARCHAR(30),
+  salary FLOAT
+);
 ```
-; -> Delimiter
 
-### DDL -( CREATE ALTER DROP TRUNCAT RENAME )
+## Operators in MySQL
 
+In MySQL, operators are of different types.
+
+| Type | Example |
+| --- | --- |
+| Arithmetic | +, -, /, %, * |
+| Comparison | =, <=, >=, !=, <, > |
+| Logical | AND, OR, NOT |
+| Pattern matching | LIKE, NOT LIKE |
+
+### CHAR Important
+
+In CHAR, we store data that has a fixed size in a table. Example: Gender, RTO, True/False.
+
+```sql
+CREATE TABLE emp (
+  id INT,
+  name VARCHAR(30),
+  age INT,
+  profile VARCHAR(30),
+  salary FLOAT
+);
+```
+
+`;` -> Delimiter
+
+### DDL
+
+DDL includes CREATE, ALTER, DROP, TRUNCATE, RENAME.
 
 ```sql
 CREATE DATABASE IF NOT EXISTS training_db;
 USE training_db;
 ```
 
-### commands 
+### Commands
 
 ```sql
-USE db_name
--- How to find out current selected DB
+USE db_name;
+
+-- How to find the current selected database
 SELECT DATABASE();
 
--- How to create new table for selected DB
-CREATE TABLE table_name(
+-- How to create a new table in the selected database
+CREATE TABLE table_name (
   empId INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
   dept TEXT NOT NULL,
   age INTEGER,
-  Salary FLOAT,
-  City VARCHAR(20)
+  salary FLOAT,
+  city VARCHAR(20)
 );
 
--- How to select Stc of emp table
-explain DB_name;
-desc DB_name;
+-- How to see the structure of a table
+EXPLAIN db_name;
+DESC db_name;
 
--- How to see all tables in DB
-show TABLES;
+-- How to see all tables in a database
+SHOW TABLES;
 
--- How to insert records in DB
--- Single Records
-INSERT INTO EMPLOYEE VALUES (0001, 'Clark', 'Sales',20,4000,'Delhi');
-INSERT INTO EMPLOYEE VALUES (0002, 'Dave', 'Accounting',20,4000,'Delhi');
-INSERT INTO EMPLOYEE VALUES (0003, 'Ava', 'Sales',20,4000,'Delhi');
+-- How to insert records into a table
+-- Single record
+INSERT INTO EMPLOYEE VALUES (0001, 'Clark', 'Sales', 20, 4000, 'Delhi');
+INSERT INTO EMPLOYEE VALUES (0002, 'Dave', 'Accounting', 20, 4000, 'Delhi');
+INSERT INTO EMPLOYEE VALUES (0003, 'Ava', 'Sales', 20, 4000, 'Delhi');
 
--- Multiple Records insert
-INSERT INTO EMPLOYEE VALUES (0001, 'Clark', 'Sales',20,4000,'Delhi'),(0002, 'Dave', 'Accounting',20,4000,'Delhi'),(0003, 'Ava', 'Sales',20,4000,'Delhi');
+-- Multiple records
+INSERT INTO EMPLOYEE VALUES
+  (0001, 'Clark', 'Sales', 20, 4000, 'Delhi'),
+  (0002, 'Dave', 'Accounting', 20, 4000, 'Delhi'),
+  (0003, 'Ava', 'Sales', 20, 4000, 'Delhi');
 
--- How to display all records of EMPLOYEE tables
+-- How to display all records of the EMPLOYEE table
 SELECT * FROM EMPLOYEE;
 
--- How to see perticular one column
+-- How to view a particular column
 SELECT name FROM EMPLOYEE;
 
--- How to insert vallues only given columns
-INERT INTO EMPLOYEE (empID, name, age) VALUES(200, 'amit', 58);
+-- How to insert values only in specific columns
+INSERT INTO EMPLOYEE (empID, name, age) VALUES (200, 'amit', 58);
 
 -- How to update records
-UPDATE EMPLOYEE SET name='amit' WHERE empID=0001;
+UPDATE EMPLOYEE SET name = 'amit' WHERE empID = 0001;
 
--- How to delete records from employee table
-DELETE FROM EMPOLYEE WHERE empID=0001;
-DELETE FROM EMPOLYEE WHERE city='dehi';
-DELETE FROM EMPOLYEE;
-
+-- How to delete records from the employee table
+DELETE FROM EMPLOYEE WHERE empID = 0001;
+DELETE FROM EMPLOYEE WHERE city = 'dehi';
+DELETE FROM EMPLOYEE;
 ```
-# 13/10/2026
 
+## 13/10/2026
 
-# 14/10/2026
+## 14/10/2026
 
-### What is diff between truncate and delete
-1. 
-2. 
-3. Rollback work only delete not on truncate.
+### Difference between TRUNCATE and DELETE
 
-### What is diff between Delete and drop
-1. In drop delete table and strcture but delete only data not strcuture.
+1. DELETE removes rows from a table, while TRUNCATE removes all rows faster.
+2. DELETE can be rolled back, but TRUNCATE cannot be rolled back in most cases.
+3. Rollback works only with DELETE, not with TRUNCATE.
 
-### What is diff between Truncate and drop
-1. In truncate delete only table not strcture but in drop delete both.
+### Difference between DELETE and DROP
 
-### How to drop database
-mysql> DROP DATABASE database_name;
+1. DROP deletes the table and its structure, while DELETE only removes data from the table.
+
+### Difference between TRUNCATE and DROP
+
+1. TRUNCATE removes table data but keeps the table structure, while DROP removes both the table and structure.
+
+### How to drop a database
 
 ```sql
-truncate table emp;
-desc emp;
-drop emp;
-select * emp;
-
+DROP DATABASE database_name;
 ```
-# Operators in MYSQL
-In mysql operators are in different types
-1. Retrivening Records Using Arithmetical Operators:-
-+, _ , / , %, *
-2. Retriveing Records using Comparision Operator:-
-=,<=,>=,!=,<,>
-3. Retriving Reocrds using logical operators:-
-AND, OR, NOT
-
-4. Retriving Records using like & not like operator:-
-LIKE, NOT LIKE ( It used for pattern matching )
- 
 
 ```sql
--- How to increment 3000 salary in existing salary
-UPDATE emp SET salary=salary+3000;
-
--- How to decrement 3000 salary in existing salary
-UPDATE emp SET salary=salary-3000;
-SELECT *,price*qty as 'total_sales'
-
--- How to multiply 3X salary in existing salary
-UPDATE emp SET salary=salary*3;
-
--- How to Divide 1/2 salary in existing salary
-UPDATE emp SET salary=salary/2;
-
--- Comparision Operator - It work with string and numeric
-SELECT * from emp WHERE name='raj';
-SELECT * from emp WHERE salary!=40000;
-
-SELECT * FROM emp WHERE name='raj' and age=30;
-
-
+TRUNCATE TABLE emp;
+DESC emp;
+DROP TABLE emp;
+SELECT * FROM emp;
 ```
 
+## Operator in MySQL
 
+In MySQL, operators are of different types.
 
+1. Retrieving records using arithmetic operators:
+   - +, -, /, %, *
+2. Retrieving records using comparison operators:
+   - =, <=, >=, !=, <, >
+3. Retrieving records using logical operators:
+   - AND, OR, NOT
+4. Retrieving records using LIKE and NOT LIKE operators:
+   - LIKE, NOT LIKE (used for pattern matching)
+   - Wildcard: `%` means zero or more characters
+   - Wildcard: `_` means a single character
+
+```sql
+-- How to increment salary by 3000
+UPDATE emp SET salary = salary + 3000;
+
+-- How to decrement salary by 3000
+UPDATE emp SET salary = salary - 3000;
+SELECT *, price * qty AS total_sales;
+
+-- How to multiply salary by 3
+UPDATE emp SET salary = salary * 3;
+
+-- How to divide salary by 2
+UPDATE emp SET salary = salary / 2;
+
+-- Comparison operators work with strings and numbers
+SELECT * FROM emp WHERE name = 'raj';
+SELECT * FROM emp WHERE salary != 40000;
+
+SELECT * FROM emp WHERE name = 'raj' AND age = 30;
+SELECT * FROM emp WHERE age BETWEEN 30 AND 40;
 ```
+
+```json
 {
   "firstName": "John",
   "lastName": "Smith",
