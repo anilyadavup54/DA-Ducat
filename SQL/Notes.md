@@ -278,6 +278,18 @@ In MySQL, operators are of different types.
 6. Using between & not between - it is used for range matching and it work with number.
 7. Using null & is not  null operator- > select *
 8. Retrieving records using order by clause :- it is used for sort the records in ascending or descending order. 
+9. MySQL Compound Operators
+
+| Operator	| Description |
+| ---------- | --------- |
+| +=  |	Add equals |
+| -=	| Subtract equals |
+| *=	| Multiply equals |
+| /=	| Divide equals |
+| %=	| Modulo equals |
+| &=	| Bitwise AND equals |
+| ^-=	| Bitwise exclusive equals |
+| *=	| Bitwise OR equals |
 
 
 
@@ -331,8 +343,27 @@ CREATE TABLE EMP(ID INT, NAME VARCHAR(20), AGE INT, SALARY FLOAT, CITY VARCHAR(2
 -- INSERT INTO EMP VALUES(107, AJIT, 24, 23000, TUKKUGUDA);
 
 -- INSERT MULTIPLE VALUES IN SINGLE LINE
-INSERT INTO EMP VALUES(101, ANIL, 20, 23000, NOIDA),(102, AMIT, 26, 23000, MAU),(103, ANKIT, 30, 23000, DELHI),(104, ANITA, 25, 23000, NOIDA),(105, ARPIT, 22, 23000, VARANSI),(106, ABHI, 23, 23000, JAIPUR),(107, AJIT, 24, 23000, TUKKUGUDA);
+INSERT INTO EMP VALUES
+(101, ANIL, 20, 23000, NOIDA),
+(102, AMIT, 26, 23000, MAU),
+(103, ANKIT, 30, 23000, DELHI),
+(104, ANITA, 25, 23000, NOIDA),
+(105, ARPIT, 22, 23000, VARANSI),
+(106, ABHI, 23, 23000, JAIPUR),
+(107, AJIT, 24, 23000, TUKKUGUDA);
 
+SELECT * FROM EMP WHERE CITY='NOIDA';
+SELECT * FROM EMP WHERE AGE>=20;
+SELECT NAME FROM EMP WHERE AGE!=30;
+
+SELECT ID,NAME FROM EMP WHERE CITY='MAU' AND AGE>=20;
+SELECT NAME FROM EMP WHERE ( CITY='MAU' OR CITY='VARANASI' OR CITY='DELHI') AND AGE>=20;
+
+SELECT * FROM EMP WHERE NAME LIKE'%I';
+SELECT * FROM EMP WHERE NAME LIKE'_%E';
+SELECT * FROM EMP WHERE NAME LIKE'___';
+SELECT * FROM EMP WHERE NAME LIKE'%A%'; -- IT'S GIVE THOES NAME WHICH IS END WITH A
+SELECT * FROM EMP WHERE NAME LIKE'%A_%';
 
 
 ```
