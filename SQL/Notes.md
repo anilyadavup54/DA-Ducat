@@ -274,6 +274,12 @@ In MySQL, operators are of different types.
    - LIKE, NOT LIKE (used for pattern matching)
    - Wildcard: `%` means zero or more characters
    - Wildcard: `_` means a single character
+5. Retrieving records using in 7 not in- it is used for list matching and it’s work with sting and numbers
+6. Using between & not between - it is used for range matching and it work with number.
+7. Using null & is not  null operator- > select *
+8. Retrieving records using order by clause :- it is used for sort the records in ascending or descending order. 
+
+
 
 ```sql
 -- How to increment salary by 3000
@@ -295,12 +301,23 @@ SELECT * FROM emp WHERE salary != 40000;
 
 SELECT * FROM emp WHERE name = 'raj' AND age = 30;
 SELECT * FROM emp WHERE age BETWEEN 30 AND 40;
+
 ```
 
-```json
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
+# Practices
+```sql
+-- Arthimatical Operator
+CREATE TABLE number(num1 int, num2 int);
+INSERT INTO number VALUES(101,110),(20,20);
+SELECT num1,num2,num1+num2 AS 'SUM' from number;
+SELECT num1,num2,num1-num2 AS 'SUB' from number;
+SELECT num1,num2,num1*num2 AS 'MULTI' from number;
+SELECT num1,num2,num1/num2 AS 'DIV' from number;
+SELECT num1,num2,num1%num2 AS 'MODE' from number;
+SELECT num1,num2,power(num1,2) AS 'Exponet' from number;
+
+
+
+
+
 ```
