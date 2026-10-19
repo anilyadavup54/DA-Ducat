@@ -278,7 +278,8 @@ In MySQL, operators are of different types.
 6. Using between & not between - it is used for range matching and it work with number.
 7. Using null & is not  null operator- > select *
 8. Retrieving records using order by clause :- it is used for sort the records in ascending or descending order. 
-9. MySQL Compound Operators
+9. MySQL Compound Operators (+=,-=,*=,/=)
+10. LIMIT
 
 | Operator	| Description |
 | ---------- | --------- |
@@ -368,3 +369,78 @@ SELECT * FROM EMP WHERE NAME LIKE'%A_%';
 -- SELECT * FROM EMP;
 
 ```
+
+
+# 19/10/2026
+
+### Retriving reocrds using IN & NOT IN operator.
+```sql
+SELECT * FROM EMP WHERE CITY IN('NOIDA','DELHI');
+SELECT * FROM EMP WHERE CITY NOT IN('NOIDA','DELHI');
+SELECT * FROM EMP WHERE ID IN(44,33,22);
+SELECT * FROM EMP WHERE ID NOT IN(44,33,22);
+```
+
+### Retriving records using between & not between operator.
+```sql
+SELECT * FROM EMP WHERE AGE BETWEEN 20 AND 25;
+SELECT * FROM EMP WHERE AGE NOT BETWEEN 20 AND 25;
+SELECT * FROM EMP WHERE SALARY BETWEEN 20000 AND 250000;
+SELECT * FROM EMP WHERE SALARY NOT BETWEEN 20000 AND 250000;
+```
+### Retriving records using order by Clause.
+```sql
+SELECT * FROM EMP ORDER BY NAME;
+SELECT * FROM EMP ORDER BY NAME DESC;
+SELECT * FROM EMP ORDER BY AGE;
+```
+
+### Retriving rocords using IS NULL & IS NOT NULL operator.
+```sql
+SELECT * FROM EMP WHERE COMMISSION IS NULL;
+SELECT * FROM EMP WHERE COMMISSION IS NOT NULL;
+
+```
+
+### Retriving records using LIMIT
+```sql
+-- How to find out top 3 records
+SELECT * FROM EMP LIMIT 3;
+
+-- How to find out bottom 3 records
+SELECT * FROM EMP LIMIT 5,3;
+SELECT * FROM EMP LIMIT 2,2;
+```
+
+## MySQL Aggregate Functions/ Multiple Row Functions/ Window Functions:-
+1. SUM()
+2. AVG()
+3. MAX()
+4. MIN()
+5. COUNT() -- It's work on string and integer but sum,max.. are work only integer type.
+
+```sql
+INSERT INTO EMP(ID,AGE,SALARY,CITY) VALUES(99,23000,HYD);
+SELECT SUM(SALARY) FROM EMP;
+SELECT SUM(SALARY) AS 'Total_Salary' FROM EMP;
+
+SELECT MAX(AGE) FROM EMP;
+SELECT MIN(AGE) FROM EMP;
+
+SELECT AVG(AGE) FROM EMP;   ---2345.9956734999
+SELECT ROUND(AVG(AGE),2) FROM EMP;  ----2345.99
+
+SELECT COUNT(*) AS 'Count' FROM EMP;
+SELECT COUNT(ID) FROM EMP;  -- 
+SELECT COUNT(NAME) FROM EMP: -- Not count null records.
+
+-- Used ALL aggregate Function
+SELECT SUM(SALARY) AS 'SUM',
+MAX(AGE) AS 'MAX',
+MIN(AGE) AS 'MIN',
+ROUND(AVG(AGE),2) AS 'AVG',
+COUNT(*) AS 'Count' FROM EMP;
+
+```
+
+
