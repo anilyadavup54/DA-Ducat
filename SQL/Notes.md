@@ -6,12 +6,12 @@ Definition of Database: A collection of information that can be organized so it 
 
 In a database, information is stored in tabular format. Tables are divided into rows and columns. Rows are horizontal and columns are vertical.
 
-| id | name | age | salary |
-| --- | --- | --- | --- |
-| 123 | anil | 20 | 20K |
-| 123 | amit | 22 | 21K |
-| 123 | ankit | 25 | 34K |
-| 123 | anita | 30 | 56K |
+| id  | name  | age | salary |
+| --- | ----- | --- | ------ |
+| 123 | anil  | 20  | 20K    |
+| 123 | amit  | 22  | 21K    |
+| 123 | ankit | 25  | 34K    |
+| 123 | anita | 30  | 56K    |
 
 Each row is also called a record or tuple. Each column is also called a field, attribute, or feature.
 
@@ -66,25 +66,26 @@ DBMS allows access to the data in a database.
 - All SQL statements define what is to be done rather than how it is to be done.
 - SQL has facilities for defining database views, security, transactions, etc.
 
-| DBMS | RDBMS |
-| --- | --- |
-| Data stored in files | Data stored in tabular form |
-| Does not support client-server architecture | Supports client-server architecture |
-| NF not possible | NF present |
-| Allows one user to access at a time | Allows multiple users |
-| Hierarchical arrangement of data | Data stored in rows and columns |
-| Low software and hardware requirements | Higher software and hardware requirements |
-| ACID not supported | Supports ACID |
-| Data redundancy | Removes data redundancy |
+| DBMS                                        | RDBMS                                     |
+| ------------------------------------------- | ----------------------------------------- |
+| Data stored in files                        | Data stored in tabular form               |
+| Does not support client-server architecture | Supports client-server architecture       |
+| NF not possible                             | NF present                                |
+| Allows one user to access at a time         | Allows multiple users                     |
+| Hierarchical arrangement of data            | Data stored in rows and columns           |
+| Low software and hardware requirements      | Higher software and hardware requirements |
+| ACID not supported                          | Supports ACID                             |
+| Data redundancy                             | Removes data redundancy                   |
 
 ### ACID
 
 ACID stands for Atomicity, Consistency, Isolation, and Durability.
+
 1. Atomicity means a transaction is all-or-nothing either all its operations succeed, or none are applied. If any part fails, the entire transaction is rolled back to keep the database consistent.
 
 - Commit: If the transaction is successful, the changes are permanently applied.
 - Abort/Rollback: If the transaction fails, any changes made during the transaction are discarded.
- 
+
 2. Consistency in transactions means that the database must remain in a valid state before and after a transaction.
 
 - A valid state follows all defined rules, constraints, and relationships (like primary keys, foreign keys, etc.).
@@ -95,9 +96,9 @@ ACID stands for Atomicity, Consistency, Isolation, and Durability.
 
 It ensures that the result of concurrent transactions is the same as if they were run one after another, preventing issues like:
 
-- *Dirty reads:* reading uncommitted data
-- *Non-repeatable reads:* data changes between two reads
-- *Phantom reads:* new rows appear during a transaction
+- _Dirty reads:_ reading uncommitted data
+- _Non-repeatable reads:_ data changes between two reads
+- _Phantom reads:_ new rows appear during a transaction
 
 4. Durability ensures that once a transaction is committed, its changes are permanently saved, even if the system fails. The data is stored in non-volatile memory, so the database can recover to its last committed state without losing data.
 
@@ -121,15 +122,15 @@ It ensures that the result of concurrent transactions is the same as if they wer
 5. Binary
 6. Special
 
-| Data Type | Description | Range |
-| --- | --- | --- |
-| BIGINT | Large integer numbers (8 bytes) | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
-| INT | Standard integer values (4 bytes) | -2,147,483,648 to 2,147,483,647 |
-| SMALLINT | Small integers | -32,768 to 32,767 |
-| MEDIUMINT | Medium-sized integers | -8,388,608 to 8,388,607 |
-| TINYINT | Very small integers | 0 to 255 or -128 to 127 |
-| DECIMAL | Exact fixed-point numbers (e.g., financial values) | -10^38 + 1 to 10^38 - 1 |
-| NUMERIC | Similar to DECIMAL, used for precision data | -10^38 + 1 to 10^38 - 1 |
+| Data Type | Description                                        | Range                                                   |
+| --------- | -------------------------------------------------- | ------------------------------------------------------- |
+| BIGINT    | Large integer numbers (8 bytes)                    | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+| INT       | Standard integer values (4 bytes)                  | -2,147,483,648 to 2,147,483,647                         |
+| SMALLINT  | Small integers                                     | -32,768 to 32,767                                       |
+| MEDIUMINT | Medium-sized integers                              | -8,388,608 to 8,388,607                                 |
+| TINYINT   | Very small integers                                | 0 to 255 or -128 to 127                                 |
+| DECIMAL   | Exact fixed-point numbers (e.g., financial values) | -10^38 + 1 to 10^38 - 1                                 |
+| NUMERIC   | Similar to DECIMAL, used for precision data        | -10^38 + 1 to 10^38 - 1                                 |
 
 ### Date and time
 
@@ -162,12 +163,12 @@ CREATE TABLE emp (
 
 In MySQL, operators are of different types.
 
-| Type | Example |
-| --- | --- |
-| Arithmetic | +, -, /, %, * |
-| Comparison | =, <=, >=, !=, <, > |
-| Logical | AND, OR, NOT |
-| Pattern matching | LIKE, NOT LIKE |
+| Type             | Example             |
+| ---------------- | ------------------- |
+| Arithmetic       | +, -, /, %, \*      |
+| Comparison       | =, <=, >=, !=, <, > |
+| Logical          | AND, OR, NOT        |
+| Pattern matching | LIKE, NOT LIKE      |
 
 ### CHAR Important
 
@@ -285,7 +286,7 @@ SELECT * FROM emp;
 In MySQL, operators are of different types.
 
 1. Retrieving records using arithmetic operators:
-   - +, -, /, %, *
+   - +, -, /, %, \*
 2. Retrieving records using comparison operators:
    - =, <=, >=, !=, <, >
 3. Retrieving records using logical operators:
@@ -296,23 +297,21 @@ In MySQL, operators are of different types.
    - Wildcard: `_` means a single character
 5. Retrieving records using in 7 not in- it is used for list matching and it’s work with sting and numbers
 6. Using between & not between - it is used for range matching and it work with number.
-7. Using null & is not  null operator- > select *
-8. Retrieving records using order by clause :- it is used for sort the records in ascending or descending order. 
-9. MySQL Compound Operators (+=,-=,*=,/=)
+7. Using null & is not null operator- > select \*
+8. Retrieving records using order by clause :- it is used for sort the records in ascending or descending order.
+9. MySQL Compound Operators (+=,-=,\*=,/=)
 10. LIMIT
 
-| Operator	| Description |
-| ---------- | --------- |
-| +=  |	Add equals |
-| -=	| Subtract equals |
-| *=	| Multiply equals |
-| /=	| Divide equals |
-| %=	| Modulo equals |
-| &=	| Bitwise AND equals |
-| ^-=	| Bitwise exclusive equals |
-| *=	| Bitwise OR equals |
-
-
+| Operator | Description              |
+| -------- | ------------------------ |
+| +=       | Add equals               |
+| -=       | Subtract equals          |
+| \*=      | Multiply equals          |
+| /=       | Divide equals            |
+| %=       | Modulo equals            |
+| &=       | Bitwise AND equals       |
+| ^-=      | Bitwise exclusive equals |
+| \*=      | Bitwise OR equals        |
 
 ```sql
 -- How to increment salary by 3000
@@ -338,6 +337,7 @@ SELECT * FROM emp WHERE age BETWEEN 30 AND 40;
 ```
 
 # Practices
+
 ```sql
 -- Arthimatical Operator
 CREATE TABLE number(num1 int, num2 int);
@@ -385,15 +385,13 @@ SELECT * FROM EMP WHERE NAME LIKE'_%E';
 SELECT * FROM EMP WHERE NAME LIKE'___';
 SELECT * FROM EMP WHERE NAME LIKE'%A%'; -- IT'S GIVE THOES NAME WHICH IS END WITH A
 SELECT * FROM EMP WHERE NAME LIKE'%A_%';
-
 -- SELECT * FROM EMP;
-
 ```
-
 
 # 19/10/2026
 
 ### Retriving reocrds using IN & NOT IN operator.
+
 ```sql
 SELECT * FROM EMP WHERE CITY IN('NOIDA','DELHI');
 SELECT * FROM EMP WHERE CITY NOT IN('NOIDA','DELHI');
@@ -402,13 +400,16 @@ SELECT * FROM EMP WHERE ID NOT IN(44,33,22);
 ```
 
 ### Retriving records using between & not between operator.
+
 ```sql
 SELECT * FROM EMP WHERE AGE BETWEEN 20 AND 25;
 SELECT * FROM EMP WHERE AGE NOT BETWEEN 20 AND 25;
 SELECT * FROM EMP WHERE SALARY BETWEEN 20000 AND 250000;
 SELECT * FROM EMP WHERE SALARY NOT BETWEEN 20000 AND 250000;
 ```
+
 ### Retriving records using order by Clause.
+
 ```sql
 SELECT * FROM EMP ORDER BY NAME;
 SELECT * FROM EMP ORDER BY NAME DESC;
@@ -416,13 +417,14 @@ SELECT * FROM EMP ORDER BY AGE;
 ```
 
 ### Retriving rocords using IS NULL & IS NOT NULL operator.
+
 ```sql
 SELECT * FROM EMP WHERE COMMISSION IS NULL;
 SELECT * FROM EMP WHERE COMMISSION IS NOT NULL;
-
 ```
 
 ### Retriving records using LIMIT
+
 ```sql
 -- How to find out top 3 records
 SELECT * FROM EMP LIMIT 3;
@@ -433,6 +435,7 @@ SELECT * FROM EMP LIMIT 2,2;
 ```
 
 ## MySQL Aggregate Functions/ Multiple Row Functions/ Window Functions:-
+
 1. SUM()
 2. AVG()
 3. MAX()
@@ -451,7 +454,7 @@ SELECT AVG(AGE) FROM EMP;   ---2345.9956734999
 SELECT ROUND(AVG(AGE),2) FROM EMP;  ----2345.99
 
 SELECT COUNT(*) AS 'Count' FROM EMP;
-SELECT COUNT(ID) FROM EMP;  -- 
+SELECT COUNT(ID) FROM EMP;  --
 SELECT COUNT(NAME) FROM EMP: -- Not count null records.
 
 -- Used ALL aggregate Function
@@ -460,8 +463,45 @@ MAX(AGE) AS 'MAX',
 MIN(AGE) AS 'MIN',
 ROUND(AVG(AGE),2) AS 'AVG',
 COUNT(*) AS 'Count' FROM EMP;
-
 ```
 
+# 21/10/2026
+
+```sql
+-- ANSWER 1
+CREATE TABLE EMP2(ID INT, NAME VARCHAR(20), DOB DATE, DOJ DATE, BDAY INT, JDAY INT);
+INSERT INTO EMP2 VALUES
+(101, 'AMIT', 20/03/2005, 21/01/2026, NULL, NULL),
+(102, 'ANITA', 20/04/2005, 21/01/2026, NULL, NULL),
+(103, 'ANKITA', 20/05/2005, 21/01/2026, NULL, NULL),
+(104, 'ANIL', 20/06/2005, 21/01/2026, NULL, NULL);
+
+  -- Insert Bday and Jday of emp
+UPDATE EMP2 SET BDAY=DATE DIFF(NOW(), DOB), JDAY=DATE DIFF(NOW(),DOJ);
+
+-- ANSWER 2
+CREATE TABLE EMP3(
+  ID int,
+  NAME VARCHAR(20),
+  DTM DATETIME,
+  Dy INT,
+  Mt INT,
+  Yr INT,
+  Hr TIME,
+  Mi TIME,
+  Se TIME,
+  DYNM VARCHAR(30)
+  );
+
+SET @now = NOW();
+
+INSERT INTO EMP3 VALUES (
+101,'AMIT',@now,DAY(@now),MONTH(@now),YEAR(@now),TIME(@now),MINUTE(@now),SECOND(@now),NULL),
+(102,'ANIL',@now,DAY(@now),MONTH(@now),YEAR(@now),TIME(@now),MINUTE(@now),SECOND(@now),NULL),
+(103,'ANKIT',@now,DAY(@now),MONTH(@now),YEAR(@now),TIME(@now),MINUTE(@now),SECOND(@now),NULL);
 
 
+-- How To Find total no of columns in a table
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EMP3' AND TABLE_SCHEMA='Company';
+
+```
