@@ -525,3 +525,23 @@ CREATE TABLE EMP_NEW AS SELECT ID, UPPER(NAME) AS 'NM' LEFT(NAME,3) AS 'LEFT', C
 -- HOW TO CONVERT TITLE NAME OF EVERY EMPLOYEE
 SELECT ID, CONCAT(UPPER(LEFT(NAME,1)),LOWER(SUBSTRING(NAME,2))) AS 'NAME' , AGE, SALARY, CONCAT(UPPER(LEFT(CITY,1)),LOWER(SUBSTRING(CITY,2))) AS 'CITY' FROM EMP;
 ```
+# 26/10/2026
+# 27/10/2026
+# 28/10/2026
+# Composite Key/ Compound Key
+### It cretate as form of primary key and it take two or more attribute to form a composite key
+
+Ex- (name,id,des)->p-key
+
+# MySQL Constraints
+1. Not Null
+2. Primary Key
+3. Unique Key
+4. Check
+5. Default
+6. Foregin Key
+7. Compound/Composite key
+8. Auto_Increment
+
+## Not Null
+- 
